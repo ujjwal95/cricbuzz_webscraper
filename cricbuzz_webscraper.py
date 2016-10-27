@@ -2,6 +2,7 @@ import urllib2
 from bs4 import BeautifulSoup
 import time
 from gi.repository import Notify
+# Use the cricbuzz website to scrape the info 
 cricbuzz = "http://www.cricbuzz.com/cricket-match/live-scores"
 page = urllib2.urlopen(cricbuzz)
 soup = BeautifulSoup(page)
