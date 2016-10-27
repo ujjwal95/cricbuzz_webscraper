@@ -1,12 +1,13 @@
 import urllib2
+from bs4 import BeautifulSoup
+import time
+from gi.repository import Notify
 
 cricbuzz = "http://www.cricbuzz.com/cricket-match/live-scores"
 
 page = urllib2.urlopen(cricbuzz)
 
-from bs4 import BeautifulSoup
-import time
-from gi.repository import Notify
+
 
 soup = BeautifulSoup(page)
 matches_info = soup.find_all('div' ,class_="cb-col-50 cb-col")
